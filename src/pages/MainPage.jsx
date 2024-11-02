@@ -1,10 +1,10 @@
 import React from 'react';
 
-P
+
 const MainPage = () => {
     return (
         <div>
-
+            Main Page
         </div>
     );
 }

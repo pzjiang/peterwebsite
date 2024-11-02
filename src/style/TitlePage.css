@@ -1,0 +1,16 @@
+._titlePageMainDiv {
+    background-color: rgb(19, 2, 151);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+._titleLink {
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    color: #f8f8f8;
+    font-size: 32px;
+    font-family: fantasy;
+}
