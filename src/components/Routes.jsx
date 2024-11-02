@@ -1,7 +1,8 @@
 import React from 'react';
+import Route from './Route'
 
 
-const Routing = () => {
+const Router = () => {
 
     return (
         <div>
@@ -10,7 +11,7 @@ const Routing = () => {
     );
 }
 
-export default Routing;
+export default Router;
 
 
 
