@@ -1,21 +1,16 @@
-import React, {useState}from 'react';
-import Route from './Route'
+import React, {useState, useEffect}from 'react';
 
 
 const Router = ({children}) => {
     const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
-    const findRightChild = () => {
-        React.Children.toArray(children).forEach(child => {
-            if (child.props.href === currentPath) {
-                console.log("found path");
-                console.log(child.props.href);
-                return child;
-            }
-        })
-        console.log("is null");
-        return null;
-    }
+    useEffect(() => {
+        const onPathChange = () => {
+            setCurrentPath(window.location.pathname);
+        }
+        window.addEventListener("popstate",onPathChange);
+        return () => {window.removeEventListener("popstate",onPathChange);}
+    },[]);    
 
     return (
         <div style={{width: "100%", height: "100%"}}>

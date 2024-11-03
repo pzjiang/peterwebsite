@@ -4,7 +4,20 @@
     height: 100%;
     justify-content: center;
     display: flex;
+    background-image: url("../static/sky.jpg");
+    overflow: hidden;
+    position: absolute;
 }
+
+._pixelPigeon {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 20%;
+
+}
+
+
 
 ._titleContainer {
     display: flex;
