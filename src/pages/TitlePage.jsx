@@ -5,7 +5,14 @@ import '../style/TitlePage.css';
 const TitlePage = () => {
     return (
         <div className="_titlePageMainDiv">
-            <Link className="_titleLink" href="hello">Peter Jiang</Link>
+            <div className='_titleContainer'>
+                <Link className="_titleLink" href="hello">
+                    <span className="_titleSpan _titleInitial">Peter Jiang</span>
+                    <span className="_titleSpan _titleSecond">Enter</span>
+                </Link>
+            </div>
+            
+
         </div>
     );
 }
