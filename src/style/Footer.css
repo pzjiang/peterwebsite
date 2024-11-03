@@ -1,0 +1,9 @@
+._footerMainDiv {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(255, 246, 222);
+    justify-content: right;
+    color: rgb(0, 0, 0);
+}

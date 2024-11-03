@@ -1,0 +1,39 @@
+._mainPageDiv{
+
+    scrollbar-width: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+._mainPageDiv::-webkit-scrollbar {
+    display: none;
+}
+
+._aboutSection {
+    background-image: url('../static/beigeBackground.jpg');
+
+}
+._expSection {
+
+
+}
+
+._projectSection {
+
+}
+
+._blogSection {
+
+}
+
+._contactSection {
+
+}
+
+._mainImgL {
+    width: 50vw;
+}
+._mainImgR {
+    width: 50vw;
+
+}
