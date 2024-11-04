@@ -1,17 +1,19 @@
 import React from 'react';
 import '../style/Footer.css';
-import LinkButton from './LinkButton';
+
 import githubIcon from '../static/githubIcon.png';
 import linkedInIcon from '../static/linkedInIcon.webp';
 import emailIcon from '../static/emailIcon.webp';
 import resumeIcon from '../static/resumeIcon.webp';
 import resume from '../static/peterJiangResume.pdf';
+import Link from './Link';
 
 const Footer = () => {
     return (
         <div className="_footerMainDiv">
-            <span className="_footerText">Contact me!</span>
+            <span className="_footerText"><Link className="_exitLink" href="/">Exit</Link></span>
             <span className="_footerButtons">
+                
                 <a target="_blank" href="https://github.com/pzjiang" className="_footerButton">
                     <img className="_footerImage" src={githubIcon}></img>
                 </a>

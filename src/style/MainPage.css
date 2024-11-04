@@ -3,19 +3,126 @@
     scrollbar-width: none;
     width: 100vw;
     height: 100vh;
+
 }
 
 ._mainPageDiv::-webkit-scrollbar {
     display: none;
 }
 
+._imageDiv {
+    height: 100%;
+    justify-content: center;
+}
+
+
+
+._aboutText {
+    height: 100%;
+    width: 75%;
+    text-align: center;
+}
+
 ._aboutSection {
     background-image: url('../static/beigeBackground.jpg');
+    display: flex;
+}
 
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes blinking-caret {
+    from, to {border-color: transparent}
+    50% {border-color: rgb(149, 0, 0)}
+}
+._wrapper {
+    display: inline-block;
+}
+._aboutTextTitle {
+    font-size: 40px;
+    margin: 0 auto;
+    font-family:monospace;
+    animation: 
+        typing 3s steps(40,end) forwards,
+        blinking-caret .75s step-end 5;
+    animation-delay: .5s;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid transparent;
+    width: 0;
+}
+._typewriterContainer {
+    margin-top: 150px;
+}
+
+._aboutTextDesc {
+    font-size: 30px;
+    margin: 0 auto;
+    font-family:monospace;
+    animation: 
+        typing 3s steps(40,end) forwards,
+        blinking-caret .75s step-end 5;
+    animation-delay: 3.75s;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid transparent;
+    width: 0;
+}
+
+._wrapperFooter {
+    margin-top: 30px;
+    display: inline-block;
+}
+
+._aboutTextFooter {
+    font-size: 25px;
+    margin: 0 auto;
+    font-family:monospace;
+    animation: 
+        typing 3s steps(40,end) forwards,
+        blinking-caret .75s step-end infinite;
+    animation-delay: 7s;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid transparent;
+    width: 0;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 ._aboutSectionImage {
-    width: 200px;
-    height: 200px;
+    width: 270px;
+    height: 270px;
+    padding-top: 40px;
+    animation: pulsate 2s infinite;
+}
+._aboutSectionBall {
+    width: 100px;
+    height: 100px;
+    animation: bounce 1s infinite alternate
+}
+@keyframes bounce {
+    from {
+        margin-top: 100px;
+    }
+    to {
+        margin-top: 0;
+    }
+
 }
 ._expSection {
     background-image: url('../static/expBackground.jpg');
@@ -31,6 +138,15 @@
     padding-top: 50px;
     font-size: 40px;
     font-family:monospace;
+}
+
+._expIcon{
+    width: 80px;
+    height: 80px;
+    padding: 30px;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 ._projectSection {

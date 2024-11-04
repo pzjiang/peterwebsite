@@ -11,10 +11,18 @@
 }
 ._footerText {
     position: absolute;
-    left: 10%;
+    left: 5%;
     top: 20%;
     max-width: 50vw;
     font-size: 30px;
+}
+._exitLink {
+    text-decoration: none;
+    display: inline-block;
+    font-family:'Times New Roman', Times, serif;
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 
 ._footerButtons {
