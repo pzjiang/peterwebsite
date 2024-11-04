@@ -13,10 +13,24 @@
     background-image: url('../static/beigeBackground.jpg');
 
 }
+._aboutSectionImage {
+    width: 200px;
+    height: 200px;
+}
 ._expSection {
     background-image: url('../static/expBackground.jpg');
-    justify-items: center;
+    justify-items: right;
 
+}
+._expSectionContent {
+    width: 70%;
+    text-align: center;
+}
+
+._expSectionTitle {
+    padding-top: 50px;
+    font-size: 40px;
+    font-family:monospace;
 }
 
 ._projectSection {

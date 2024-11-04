@@ -7,7 +7,6 @@ const TitlePage = () => {
     const [anim,setAnim] = useState();
 
     useEffect(() => {
-        console.log("set interval");
         setAnim(
             setInterval(()=> {
                 const pigeon = document.getElementById("pixelPigeon");
@@ -21,7 +20,6 @@ const TitlePage = () => {
             }, 1000/60)
         );
         return ()=>{
-            console.log("clean up");
             clearInterval(anim);
         }
     },[])

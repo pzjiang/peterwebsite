@@ -32,7 +32,7 @@
     text-decoration: none;
     color: #000000;
     font-size: 80px;
-    font-family: fantasy;
+    font-family:fantasy;
     overflow: hidden;
     &:hover ._titleInitial{
         transform: translateX(100%);
