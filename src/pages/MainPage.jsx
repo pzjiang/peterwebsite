@@ -2,6 +2,8 @@ import React from 'react';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
 import '../style/MainPage.css';
+import closedBook from '../static/closedBook.png';
+import Link from '../components/Link';
 
 
 const MainPage = () => {
@@ -13,7 +15,7 @@ const MainPage = () => {
             </Section>
             <Section className="_expSection" >
                 <img className="_expSectionImage _mainImgR" ></img>
-                <div>Experience </div>
+                <div>Technologies I've worked with: </div>
             </Section>
             {/*
             <Section className="_projectSection">
@@ -22,8 +24,12 @@ const MainPage = () => {
             </Section>
             */}
             <Section className="_blogSection">
-                <img className="_blogSectionImage _mainImgR" ></img>
-                <div>Creative Writing</div>
+                <div className="_blogCaption">
+                    <div className="_blogCaptionTitle">Check out my blog</div>
+                    <div className="_blogCaptionBody">I put weekly rants, thoughts, or random stories within. Open the book to read more!</div>
+                    <Link href="blogs" className=""><img src={closedBook} className="_blogSectionImage" ></img></Link>
+                </div>
+                
             </Section>
            
             <Footer />

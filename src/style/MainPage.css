@@ -14,7 +14,8 @@
 
 }
 ._expSection {
-
+    background-image: url('../static/expBackground.jpg');
+    justify-items: center;
 
 }
 
@@ -23,8 +24,32 @@
 }
 
 ._blogSection {
-
+    background-image: url('../static/pixelLibrary.png');
 }
+._blogCaption {
+    text-align: center;
+    padding-top: 50px;
+}
+
+._blogCaptionTitle {
+    font-family:cursive;
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+
+._blogCaptionBody {
+    padding-bottom: 50px;
+    font-family: cursive;
+}
+
+._blogSectionImage {
+    height: 100px;
+    width: 100px;
+    &:hover {
+        content: url('../static/openBook.png');
+    }
+}
+
 
 ._contactSection {
 
