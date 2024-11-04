@@ -15,17 +15,17 @@ const MainPage = () => {
                 <img className="_expSectionImage _mainImgR" ></img>
                 <div>Experience </div>
             </Section>
+            {/*
             <Section className="_projectSection">
                 <img className="_projectSectionImage _mainImgL" ></img>
                 <div>Projects</div>
             </Section>
+            */}
             <Section className="_blogSection">
                 <img className="_blogSectionImage _mainImgR" ></img>
                 <div>Creative Writing</div>
             </Section>
-            <Section className="_contactSection">
-                Contact me!
-            </Section>
+           
             <Footer />
         </div>
     );

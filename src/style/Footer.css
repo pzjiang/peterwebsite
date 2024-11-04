@@ -4,6 +4,33 @@
     width: 100vw;
     height: 60px;
     background-color: rgb(255, 246, 222);
-    justify-content: right;
+    overflow: hidden;
     color: rgb(0, 0, 0);
+    display: flex;
+
+}
+._footerText {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    max-width: 50vw;
+    font-size: 30px;
+}
+
+._footerButtons {
+    margin: 5px;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    display: flex;
+    width: 20vw;
+}
+
+._footerButton {
+    padding-right: 30px;
+}
+
+._footerImage {
+    max-width: 30px;
+    max-height: 30px;
 }

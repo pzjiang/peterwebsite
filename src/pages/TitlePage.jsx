@@ -13,7 +13,7 @@ const TitlePage = () => {
                 const pigeon = document.getElementById("pixelPigeon");
                 if (pigeon) {
                     const pigeonPos = pigeon.offsetLeft;
-                    pigeon.style.left = (pigeonPos - 2) + "px";
+                    pigeon.style.left = (pigeonPos - 1) + "px";
                     if (pigeon.offsetLeft < -50) {
                         pigeon.style.left = "100%";
                     }
