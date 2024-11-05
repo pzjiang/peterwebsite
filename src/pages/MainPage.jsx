@@ -70,7 +70,7 @@ const MainPage = () => {
                 
             </Section>
            
-            <Footer />
+            <Footer href="/" />
         </div>
     );
 }

@@ -8,10 +8,11 @@ import resumeIcon from '../static/resumeIcon.webp';
 import resume from '../static/peterJiangResume.pdf';
 import Link from './Link';
 
-const Footer = () => {
+const Footer = ({href}) => {
+
     return (
         <div className="_footerMainDiv">
-            <span className="_footerText"><Link className="_exitLink" href="/">Exit</Link></span>
+            <span className="_footerText"><Link className="_exitLink" href={href}>Go Back</Link></span>
             <span className="_footerButtons">
                 
                 <a target="_blank" href="https://github.com/pzjiang" className="_footerButton">
