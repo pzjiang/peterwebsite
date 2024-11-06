@@ -16,16 +16,16 @@ const Footer = ({href}) => {
             <span className="_footerButtons">
                 
                 <a target="_blank" href="https://github.com/pzjiang" className="_footerButton">
-                    <img className="_footerImage" src={githubIcon}></img>
+                    <img title="My github" className="_footerImage" src={githubIcon}></img>
                 </a>
                 <a href="https://www.linkedin.com/in/peter-jiang-9923580bb/" target="_blank" className="_footerButton">
-                    <img className="_footerImage" src={linkedInIcon}></img>
+                    <img title="Visit my LinkedIn" className="_footerImage" src={linkedInIcon}></img>
                 </a>
                 <a href="mailto:pzjiang01@hotmail.com" className="_footerButton">
-                    <img src={emailIcon} className="_footerImage"></img>
+                    <img title="Email me" src={emailIcon} className="_footerImage"></img>
                 </a>
                 <a download="peterJiangResume" href={resume} className="_footerButton">
-                    <img src={resumeIcon} className="_footerImage" ></img>
+                    <img title="My resume" src={resumeIcon} className="_footerImage" ></img>
                 </a>
 
             </span>

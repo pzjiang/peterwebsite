@@ -192,3 +192,48 @@
     width: 50vw;
 
 }
+
+
+._hulusiSectionDiv {
+    background-image: url('../static/hulusiBack.jpg');
+    display: flex;
+}
+
+
+._hulusiPic {
+    margin-top: 60px;
+    height: 250px;
+    width: 250px;
+}
+._hulusiInfo {
+    width: 400px;
+}
+
+._hulusiDescHeader {
+    margin-top: 30px;
+    font-size: 35px;
+}
+
+._hulusiDescBody {
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+@keyframes aura {
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+      }
+      100% {
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+      }
+}
+
+._hulusiEmailIcon {
+    margin-top: 60px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    &:hover {
+        animation: aura 1s infinite;
+    }
+}

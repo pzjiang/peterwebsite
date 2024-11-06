@@ -1,9 +1,10 @@
 import React from 'react';
+import '../style/BlogPage.css'; 
 
 const SingleBlog = () => {
     return (
-        <div>
-            Single Blog Page
+        <div className="_blogPage">
+            
         </div>
     );
 }

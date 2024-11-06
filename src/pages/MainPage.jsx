@@ -14,6 +14,8 @@ import pythonIcon from '../static/pythonIcon.png';
 import nodeIcon from '../static/nodeIcon.jpg';
 import sqlIcon from '../static/sqlIcon.jpg';
 import volleyball from '../static/pixelvolleyball.png';
+import hulusi from '../static/hulusi.png';
+import emailIcon from '../static/redEmail.png';
 
 const MainPage = () => {
     return (
@@ -55,12 +57,30 @@ const MainPage = () => {
                     </div>
                 </div>
             </Section>
-            {/*
-            <Section className="_projectSection">
-                <img className="_projectSectionImage _mainImgL" ></img>
-                <div>Projects</div>
+            <Section className="_hulusiSectionDiv">
+                <div className="_hulusiPicDiv">
+                    <img className="_hulusiPic" alt="hulusi" src={hulusi} />
+                </div>
+                <div className="_hulusiDescDiv">
+                    <div className="_hulusiInfo">
+                        <div className="_hulusiDescHeader">
+                            Hu-Lu-Si tutoring available!
+                        </div>
+                        <div className="_hulusiDescBody">
+                            Due to operational difficulties, I will no longer be offering virtual/remote classes. 
+                            However, feel free to reach out if you live within the Madison/Verona WI area, currently accepting students!
+                        </div>
+                        <div className="_hulusiEmailLink">
+                            <a title="email me!" href="mailto:werdwebe@gmail.com"><img className="_hulusiEmailIcon" src={emailIcon} /> </a>
+                        </div>
+                    </div>
+                </div>
             </Section>
-            */}
+            
+            <Section className="_projectSection">
+                
+            </Section>
+            
             <Section className="_blogSection">
                 <div className="_blogCaption">
                     <div className="_blogCaptionTitle">Check out my blog</div>

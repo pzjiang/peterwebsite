@@ -41,4 +41,7 @@
 ._footerImage {
     max-width: 30px;
     max-height: 30px;
+    &:hover {
+        transform: translateY(-10%);
+    }
 }
