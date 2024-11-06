@@ -1,14 +1,12 @@
 ._mainPageDiv{
 
-    scrollbar-width: none;
+ 
     width: 100vw;
     height: 100vh;
 
 }
 
-._mainPageDiv::-webkit-scrollbar {
-    display: none;
-}
+
 
 ._imageDiv {
     height: 100%;
@@ -25,6 +23,7 @@
 
 ._aboutSection {
     background-image: url('../static/beigeBackground.jpg');
+    
     display: flex;
 }
 
@@ -149,9 +148,71 @@
     }
 }
 
+
+
 ._projectSection {
+    position: relative;
 
 }
+
+@keyframes animateSquare {
+    from {
+        opacity: 0.6;
+        transform: scale(1) rotate(0deg);
+    }
+    to {
+        transform: scale(20) rotate(960deg);
+        opacity: 0;
+    }
+}
+
+._projectSquare {
+    z-index: -1;
+    position: absolute;
+    border: solid 1px rgb(184, 183, 183);
+    width: 10px;
+    height: 10px;
+    animation: animateSquare 12s ease-in-out infinite;
+    opacity: 0;
+    left:50px;
+    top: 70px;
+}
+
+._projectSquare:nth-child(2n) {
+    border-color: rgb(149, 149, 149);
+}
+
+._projectSquare:nth-child(2) {
+    animation-delay: 4s;
+    left:910px;
+    top: 300px;
+}
+._projectSquare:nth-child(3) {
+    animation-delay: 8s;
+    left:800px;
+    top: 150px;
+}
+._projectSquare:nth-child(4) {
+    animation-delay: 12s;
+    left:410px;
+    top: 140px;
+}
+._projectSquare:nth-child(5) {
+    animation-delay: 16s;
+    left:210px;
+    top: 40px;
+}
+._projectSquare:nth-child(6) {
+    animation-delay: 20s;
+    left:710px;
+    top: 210px;
+}
+._projectSquare:nth-child(7) {
+    animation-delay: 24s;
+    left:90px;
+    top: 280px;
+}
+
 
 ._blogSection {
     background-image: url('../static/pixelLibrary.png');
@@ -181,9 +242,6 @@
 }
 
 
-._contactSection {
-
-}
 
 ._mainImgL {
     width: 50vw;

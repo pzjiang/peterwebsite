@@ -16,10 +16,12 @@ import sqlIcon from '../static/sqlIcon.jpg';
 import volleyball from '../static/pixelvolleyball.png';
 import hulusi from '../static/hulusi.png';
 import emailIcon from '../static/redEmail.png';
+import Header from '../components/Header';
 
 const MainPage = () => {
     return (
         <div className="_mainPageDiv">
+            <Header />
             <Section className="_aboutSection">
                 <div className="_aboutText">
                     <div className="_typewriterContainer">
@@ -78,7 +80,13 @@ const MainPage = () => {
             </Section>
             
             <Section className="_projectSection">
-                
+                <div className="_projectSquare"></div>
+                <div className="_projectSquare"></div>
+                <div className="_projectSquare"></div>
+                <div className="_projectSquare"></div>
+                <div className="_projectSquare"></div>
+                <div className="_projectSquare"></div>
+                <div className="_projectSquare"></div>
             </Section>
             
             <Section className="_blogSection">

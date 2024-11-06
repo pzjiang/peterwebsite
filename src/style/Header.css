@@ -1,0 +1,65 @@
+._headerBar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color:  white;
+    z-index: 3;
+    display: flex;
+}
+._headerLogo {
+    width: 80%;
+}
+
+._headerIcon {
+    height: 50px;
+    margin-left: 20px;
+}
+
+._headerQuickLinks{
+    width: 30%;
+    position: relative;
+    display: inline-block;
+}
+._headerMenuDiv {
+    display: inline-block;
+    height: 50px;
+    position: absolute;
+    right: 100px;
+
+    &:hover ._dropdownContent {
+        display: inline-block;
+    }
+}
+
+._headerMenu {
+    height: 50px;
+    border-radius: 10%;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+._dropdownContent {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    display: none;
+    border-radius: 5%;
+    box-shadow: 0 0 56px 8px rgba(0, 0, 0, .2);
+    width: 200px;
+    background-color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+._quickRow {
+    margin-bottom: 5px;
+    & a{
+        text-decoration: none;
+        color: rgb(0, 56, 69);
+    }
+    &:hover {
+        background-color: rgb(220, 220, 220);
+    }
+}
