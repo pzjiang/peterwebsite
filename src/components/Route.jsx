@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 
-const Route = ({path, children}) => {
-
+const Route = ({infoProps, children}) => {
+    console.log(children);
     return children;
 }
 
