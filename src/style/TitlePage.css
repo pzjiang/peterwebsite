@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'pixelFont';
+    src: url('./bulky-pixels.regular.ttf');
+  }
+
 @keyframes animateSky {
     0% {
         background-position: top left;
@@ -6,6 +11,7 @@
         background-position: bottom right;
     }
 }
+
 
 
 ._titlePageMainDiv {
@@ -52,7 +58,7 @@
     text-decoration: none;
     color: #000000;
     font-size: 80px;
-    font-family:fantasy;
+    font-family: pixelFont;
     overflow: hidden;
     &:hover ._titleInitial{
         transform: translateX(100%);

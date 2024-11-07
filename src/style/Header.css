@@ -26,19 +26,18 @@
     height: 50px;
     position: absolute;
     right: 100px;
-
+    &:hover {
+        cursor: pointer;
+    }
     
 }
-._headerMenuDiv:hover div {
+._headerMenuDiv:hover ._dropdownContent {
     display: inline-block;
 }
 
 ._headerMenu {
     height: 50px;
     border-radius: 10%;
-    &:hover {
-        cursor: pointer;
-    }
 }
 
 ._dropdownContent {
@@ -55,12 +54,48 @@
 }
 
 ._quickRow {
+    margin-top: 5px;
     margin-bottom: 5px;
-    & a{
-        text-decoration: none;
-        color: rgb(0, 56, 69);
-    }
+    height: 22px;
     &:hover {
         background-color: rgb(220, 220, 220);
     }
+}
+._quickLink {
+    text-decoration: none;
+    color: rgb(0, 56, 69);
+
+}
+
+._projectDropdownContent {
+    position: absolute;
+    left: -150px;
+    display: none;
+    width: 150px;
+    background-color: white;
+    z-index: 2;
+    box-shadow: 0 0 56px 8px rgba(0, 0, 0, .2);
+    border-radius: 5%;
+}
+
+._projectRow {
+    position: relative;
+    &:hover ._projectDropdownContent{
+        display: inline-block;
+    }
+}
+
+._projectSubRow{
+    &:hover {
+        background-color: rgb(220, 220, 220);
+    }
+
+}
+
+._projectArrow {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    left: 4px;
+    top: 3px;
 }

@@ -5,7 +5,7 @@ import Header from '../components/Header';
 
 const BlogPage = () => {
     return (
-        <div>
+        <div className="_blogLibrary">
             <Header />
             Under maintenance
             <Footer href="/home" />

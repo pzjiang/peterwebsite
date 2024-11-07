@@ -79,7 +79,7 @@ const MainPage = () => {
                 </div>
             </Section>
             
-            <Section className="_projectSection">
+            <Section id="projects" className="_projectSection">
                 <div className="_projectSquare"></div>
                 <div className="_projectSquare"></div>
                 <div className="_projectSquare"></div>

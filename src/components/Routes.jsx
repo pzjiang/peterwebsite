@@ -6,6 +6,7 @@ const Router = ({children}) => {
 
     useEffect(() => {
         const onPathChange = () => {
+
             setCurrentPath(window.location.pathname);
         }
         window.addEventListener("popstate",onPathChange);
