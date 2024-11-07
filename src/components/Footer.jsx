@@ -14,7 +14,7 @@ const Footer = ({href}) => {
         <div className="_footerMainDiv">
             <span className="_footerText"><Link className="_exitLink" href={href}>Go Back</Link></span>
             <span className="_footerButtons">
-                
+                {/*
                 <a target="_blank" href="https://github.com/pzjiang" className="_footerButton">
                     <img title="My github" className="_footerImage" src={githubIcon}></img>
                 </a>
@@ -27,7 +27,8 @@ const Footer = ({href}) => {
                 <a download="peterJiangResume" href={resume} className="_footerButton">
                     <img title="My resume" src={resumeIcon} className="_footerImage" ></img>
                 </a>
-
+                */}
+                <span className="_copyRight">© peter jiang, 2024. all rights reserved.</span>
             </span>
         </div>
     );

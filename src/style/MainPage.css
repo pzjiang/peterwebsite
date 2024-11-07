@@ -43,7 +43,7 @@
     display: inline-block;
 }
 ._aboutTextTitle {
-    font-size: 40px;
+    font-size: 36px;
     margin: 0 auto;
     font-family:monospace;
     animation: 
@@ -60,7 +60,7 @@
 }
 
 ._aboutTextDesc {
-    font-size: 30px;
+    font-size: 26px;
     margin: 0 auto;
     font-family:monospace;
     animation: 
@@ -79,7 +79,7 @@
 }
 
 ._aboutTextFooter {
-    font-size: 25px;
+    font-size: 21px;
     margin: 0 auto;
     font-family:monospace;
     animation: 

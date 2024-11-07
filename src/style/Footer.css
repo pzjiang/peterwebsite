@@ -45,3 +45,7 @@
         transform: translateY(-10%);
     }
 }
+._copyRight {
+    margin-top:4px;
+    font-size: 14px;
+}

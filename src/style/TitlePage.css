@@ -21,6 +21,7 @@
     justify-content: center;
     display: flex;
     background-image: url("../static/sky.jpg");
+    background-size:200%;
     overflow: hidden;
     position: absolute;
     animation: animateSky 40s infinite alternate;
