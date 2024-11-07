@@ -27,9 +27,10 @@
     position: absolute;
     right: 100px;
 
-    &:hover ._dropdownContent {
-        display: inline-block;
-    }
+    
+}
+._headerMenuDiv:hover div {
+    display: inline-block;
 }
 
 ._headerMenu {

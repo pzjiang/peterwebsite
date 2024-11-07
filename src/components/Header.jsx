@@ -12,7 +12,7 @@ const Header = () => {
                 <div className="_headerMenuDiv">
                     <img alt="menu" className="_headerMenu" src={menuIcon} /> 
                     <div className="_dropdownContent">
-                        <h4>Quick Links!</h4>
+                        <h5>Quick Links!</h5>
                         <div className="_quickRow"><Link href="/home">Home</Link></div>
                         <div className="_quickRow"><Link href="/blogs">Blog</Link></div>
                         <div className="_quickRow"><Link href="/projects">Projects</Link></div>
