@@ -70,7 +70,8 @@ const MainPage = () => {
                         </div>
                         <div className="_hulusiDescBody">
                             Due to operational difficulties, I will no longer be offering virtual/remote classes. 
-                            However, feel free to reach out if you live within the Madison/Verona WI area, currently accepting students!
+                            However, feel free to reach out if you live within the Madison/Verona WI area, either through the email link below
+                            or through my WeChat: Pzjiang4568
                         </div>
                         <div className="_hulusiEmailLink">
                             <a title="email me!" href="mailto:werdwebe@gmail.com"><img className="_hulusiEmailIcon" src={emailIcon} /> </a>
@@ -87,6 +88,12 @@ const MainPage = () => {
                 <div className="_projectSquare"></div>
                 <div className="_projectSquare"></div>
                 <div className="_projectSquare"></div>
+                <div className="_displayProjectDiv">
+
+                </div>
+                <div className="_embedProjectDiv">
+
+                </div>
             </Section>
             
             <Section className="_blogSection">
