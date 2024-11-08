@@ -6,11 +6,15 @@ const Router = ({children}) => {
 
     useEffect(() => {
         const onPathChange = () => {
-
             setCurrentPath(window.location.pathname);
         }
+
         window.addEventListener("popstate",onPathChange);
-        return () => {window.removeEventListener("popstate",onPathChange);}
+
+        return (() => {
+                window.removeEventListener("popstate",onPathChange);
+            }
+        );
     },[]);    
 
     return (

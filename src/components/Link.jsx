@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Link = ({className, href, children}) => {
+const Link = ({className, href, children, anchor}) => {
 
 
     const onClick = (event) => {

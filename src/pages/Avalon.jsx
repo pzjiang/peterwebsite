@@ -68,7 +68,7 @@ const Avalon = () => {
                     </div>
                 </div>
             </div>
-            <Footer href="/home"/>
+            <Footer href="/home#projects"/>
         </div>
     );
 }

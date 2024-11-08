@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
 import '../style/MainPage.css';
@@ -19,6 +19,13 @@ import emailIcon from '../static/redEmail.png';
 import Header from '../components/Header';
 
 const MainPage = () => {
+    useEffect(() => {
+        const elem = document.getElementById(window.location.hash.substring(1));
+        if (elem) {
+            elem.scrollIntoView(false);
+        }
+    },[]);
+
     return (
         <div className="_mainPageDiv">
             <Header />
@@ -80,7 +87,8 @@ const MainPage = () => {
                 </div>
             </Section>
             
-            <Section id="projects" className="_projectSection">
+            <Section className="_projectSection">
+                <div id="projects" className="_bottomProject"></div>
                 <div className="_projectSquare"></div>
                 <div className="_projectSquare"></div>
                 <div className="_projectSquare"></div>
@@ -89,10 +97,37 @@ const MainPage = () => {
                 <div className="_projectSquare"></div>
                 <div className="_projectSquare"></div>
                 <div className="_displayProjectDiv">
-
+                    <div className="_displayProjectDivHeader">
+                        Project Gallery
+                    </div>
+                    <div className="_displayProjectDivBody"> 
+                        <div className="_expandButton">
+                            <Link href="/avalon" className="_expandLink _av">
+                                <div className="_expandIcon _avI"></div>
+                                <div className="_expandText">Avalon</div>
+                            </Link>
+                        </div>
+                        <div className="_expandButton">
+                            <Link href="/purdueZilla" className="_expandLink _zi">
+                                <div className="_expandIcon _ziI"></div>
+                                <div className="_expandText">PurdueZilla</div>
+                            </Link>
+                        </div>
+                        <div className="_expandButton">
+                            <Link href="/purdueHang" className="_expandLink _ha">
+                                <div className="_expandIcon _haI"></div>
+                                <div className="_expandText">Purdue Hangman</div>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
-                <div className="_embedProjectDiv">
-
+                <div className="_displayProjectDiv">
+                    <div className="_displayProjectDivHeader">
+                        Embedded Projects
+                    </div>
+                    <div className="_displayProjectDivBody">
+                        Coming Soon!
+                    </div>
                 </div>
             </Section>
             
