@@ -7,7 +7,14 @@ const BlogPage = () => {
     return (
         <div className="_blogLibrary">
             <Header />
-            Under maintenance
+                <div className="_blogMainDiv">
+                    <div className="_aboutBlogDiv">
+
+                    </div>
+                    <div className="_blogLibraryDiv">
+
+                    </div>
+                </div>
             <Footer href="/home" />
         </div>
     );
