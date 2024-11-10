@@ -132,7 +132,7 @@ const MainPage = () => {
             </Section>
             
             <Section className="_blogSection">
-                <div className="_blogCaption">
+                <div id="blog" className="_blogCaption">
                     <div className="_blogCaptionTitle">Check out my blog</div>
                     <div className="_blogCaptionBody">{/*I put weekly rants, thoughts, or random stories within. Open the book to read more!*/}Currently undergoing renovation, please check back later</div>
                     <Link href="blogs" className=""><img alt="pixel book" src={closedBook} className="_blogSectionImage" ></img></Link>

@@ -1,3 +1,58 @@
 ._blogLibrary {
     margin-top: 50px;
 }
+
+
+._blogMainDiv {
+    height: 100vh;
+    width: 100vw;
+}
+
+._singleBlog {
+    display: flex;
+    margin-left: 50px;
+    padding-top: 30px;
+    width: 80vw;
+    min-width: 800px;
+    position: relative;
+}
+
+._blogImageDiv {
+    width: 100px;
+    height: 100%;
+}
+._blogBodyDiv {
+    display: inline;
+    width: 100%;
+    margin-left: 20px;
+    padding-bottom: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 16px;
+}
+._blogTitle {
+    text-align: center;
+    font-size: 28px;
+}
+._blogContent {
+    margin-top: 16px;
+    font-size: 18px;
+}
+
+._blogAfterword {
+    margin-top: 16px;
+    font-size: 14px;
+    text-align: center;
+}
+
+._blogImage {
+    width: 100px;
+    height: 100px;
+}
+._blogFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+    font-size: 10px;
+}
