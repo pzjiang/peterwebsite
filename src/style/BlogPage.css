@@ -6,6 +6,7 @@
 ._blogMainDiv {
     height: 100vh;
     width: 100vw;
+    padding-bottom: 70px;
 }
 
 ._singleBlog {
@@ -15,6 +16,7 @@
     width: 80vw;
     min-width: 800px;
     position: relative;
+    padding-bottom: 70px;
 }
 
 ._blogImageDiv {
@@ -39,9 +41,25 @@
 }
 
 ._blogAfterword {
-    margin-top: 16px;
+    margin-top: 8px;
     font-size: 14px;
     text-align: center;
+}
+._blogBrowseMore {
+    font-size: 20px;
+    background: linear-gradient(to right, rgb(106, 168, 243) 0%, rgb(165, 218, 236) 80%, rgb(165, 218, 236) 100%);
+    border-radius: 1.65rem;
+    padding: 10px;
+    border: none;
+    transition: all 0.1s ease-in;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
 }
 
 ._blogImage {
@@ -50,7 +68,7 @@
 }
 ._blogFooter {
     position: absolute;
-    bottom: 0;
+    bottom: 70px;
     left: 0;
     right: 0;
     text-align: right;

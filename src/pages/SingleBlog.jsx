@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/BlogPage.css'; 
-
+import Link from '../components/Link';
 const SingleBlog = ({children, date, imgSrc}) => {
     
     const addLineBreak = (str) => {
@@ -9,7 +9,7 @@ const SingleBlog = ({children, date, imgSrc}) => {
                 {str.split('\n').map((str1) => {
                     return (
                         <> 
-                            {str1}
+                            &emsp; {str1}
                             <br />
                         </>
                     );
@@ -32,7 +32,7 @@ const SingleBlog = ({children, date, imgSrc}) => {
                     
                 </div>
                 <div className="_blogAfterword">
-                    {children[2]}
+                    <button className="_blogBrowseMore">Browse More</button>
                 </div>
             </div>
             <div className="_blogFooter">
