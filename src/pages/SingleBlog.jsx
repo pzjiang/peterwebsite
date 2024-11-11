@@ -1,7 +1,9 @@
 import React from 'react';
 import '../style/BlogPage.css'; 
-import Link from '../components/Link';
-const SingleBlog = ({children, date, imgSrc}) => {
+
+import BlogImage from '../components/BlogImage';
+
+const SingleBlog = ({children, date, returnCallback, value}) => {
     
     const addLineBreak = (str) => {
         return (
@@ -20,9 +22,7 @@ const SingleBlog = ({children, date, imgSrc}) => {
 
     return (
         <div className="_singleBlog">
-            <div className="_blogImageDiv">
-                <img src={imgSrc} className="_blogImage" />
-            </div>
+            <BlogImage value={value} />
             <div className="_blogBodyDiv">
                 <div className="_blogTitle">
                     {children[0]}
@@ -32,7 +32,7 @@ const SingleBlog = ({children, date, imgSrc}) => {
                     
                 </div>
                 <div className="_blogAfterword">
-                    <button className="_blogBrowseMore">Browse More</button>
+                    <button  onClick={returnCallback} className="_blogBrowseMore">Browse More</button>
                 </div>
             </div>
             <div className="_blogFooter">

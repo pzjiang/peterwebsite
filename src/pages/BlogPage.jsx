@@ -1,18 +1,28 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Footer from '../components/Footer';
 import '../style/BlogPage.css';
 import Header from '../components/Header';
 import SingleBlog from './SingleBlog';
-import lion from '../static/lion.png';
+import BlogCard from '../components/BlogCard';
 
 const BlogPage = () => {
+    const [currentBlog,setCurrentBlog] = useState(-1);
+
+    const onReturn = () => {
+        setCurrentBlog(-1);
+    }
+
+    const blogSelection = (value) => {
+        setCurrentBlog(value);
+    }
+
     return (
         <div className="_blogLibrary">
             <Header />
                 <div className="_blogMainDiv">
-                    
-                    <SingleBlog date="10/21/2024" imgSrc={lion}>
-                        {/* */"Why 10 billion lions could default all the pokemon"}
+                    {/*
+                    <SingleBlog date="10/21/2024" imgSrc={lion} returnCallback={onReturn} value={1}>
+                        {"Why 10 billion lions could default all the pokemon"}
                         {`
                         Now I know what you might be thinking, there’s no way 10 billion lions could defeat all the pokemon, even if they have an absolutely atrocious numbers advantage. Additionally, all the arguments for lions winning involve ignoring any logic that the pokemon advocate presents, and simply repeating over and over how 10 billion is such a large number. Well, I’m here to present “legitimate” facts and logic. \n
 
@@ -26,7 +36,7 @@ At the end of it all, the average pokemon is simply not strong enough to hold it
                         }
                         
                     </SingleBlog>
-                    
+                    */}
                 </div>
             <Footer href="/home#blog" />
         </div>
