@@ -9,6 +9,7 @@ import {useLoadBlog} from '../hooks/CustomHook';
 
 const BlogPage = () => {
     const {isLoaded, blogs} = useLoadBlog("blogs");
+
     const onReturn = () => {
         //setCurrentBlog(-1);
     }
@@ -22,18 +23,8 @@ const BlogPage = () => {
             <div className="_blogLibrary">
                 <Header />
                     <div className="_blogLibraryContent">
-                        <div className="_blogsDisplay">
-                            <div className="_blogsDisplayHeader">Blogs</div>
-                            <div className="_blogsDisplayBody">
-
-                            </div>
-                        </div>
-                        <div className="_blogsDisplay">
-                            <div className="_blogsDisplayHeader">Novel/Manhwa Reviews</div> 
-                            <div className="_blogsDisplayBody">
-
-                            </div>
-                        </div>
+                        <BlogCard search="blogs" header="Blogs" />
+                        <BlogCard search="reviews" header="Manhwa/Novel reviews"/>
                     </div>
                 <Footer href="/home#blog" />
             </div>

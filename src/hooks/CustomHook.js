@@ -20,7 +20,8 @@ function useLoadBlog (search) {
                         blogArr.push(obj);
                     }
                 }
-                setBlogs(blogArr);
+                //flip blogs order;
+                setBlogs(blogArr.reverse());
             }
         ).catch((error) => {
             console.log(error);
