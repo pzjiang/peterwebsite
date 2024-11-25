@@ -15,6 +15,9 @@
     background-size: 150%;
     background-position-x: 20%;
     background-position-y: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
 }
 
 ._projectDisplay {
@@ -24,6 +27,9 @@
     height: 100vh;
     width: 100vw;
     min-width: 1100px;
+    padding-bottom: 60px;
+
+
 }
 ._projectTechTitle {
     margin-top: 40px;
@@ -45,6 +51,8 @@
 ._projectDesc {
     margin-top: 50px;
     width: 550px;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 ._projectDemo{
     margin-top: 50px;
@@ -63,6 +71,7 @@
     margin-top: 50px;
     font-size: 16px;
     margin-left: 20px;
+
 }
 ._gallerySlide {
     width: 500px;

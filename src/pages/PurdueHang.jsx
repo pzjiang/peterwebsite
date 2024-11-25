@@ -10,6 +10,7 @@ import losing from '../static/losescreen.png';
 
 const PurdueHang = () => {
     return (
+        <>
         <div className="_avalonDivBack">
             <Header />
             <div className="_projectDisplay">
@@ -57,8 +58,10 @@ const PurdueHang = () => {
                     </div>
                 </div>
             </div>
-            <Footer href="/home#projects"/>
+         
         </div>
+        <Footer href="/home#projects"/>
+        </>
     );
 }
 
