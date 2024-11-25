@@ -3,12 +3,12 @@ import '../style/BlogPage.css';
 
 import BlogImage from '../components/BlogImage';
 
-const SingleBlog = ({children, date, returnCallback, value}) => {
+const SingleBlog = ({children, imgSrc, returnCallback}) => {
     
     const addLineBreak = (str) => {
         return (
             <>
-                {str.split('\n').map((str1) => {
+                {str.split("\\n").map((str1) => {
                     return (
                         <> 
                             &emsp; {str1}
@@ -22,7 +22,7 @@ const SingleBlog = ({children, date, returnCallback, value}) => {
 
     return (
         <div className="_singleBlog">
-            <BlogImage value={value} />
+            <BlogImage value={imgSrc} />
             <div className="_blogBodyDiv">
                 <div className="_blogTitle">
                     {children[0]}
@@ -36,7 +36,7 @@ const SingleBlog = ({children, date, returnCallback, value}) => {
                 </div>
             </div>
             <div className="_blogFooter">
-                Written at {date}
+                Written at {children[2]}
             </div>
             
         </div>

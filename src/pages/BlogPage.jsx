@@ -8,24 +8,44 @@ import {useLoadBlog} from '../hooks/CustomHook';
 
 
 const BlogPage = () => {
-    const {isLoaded, blogs} = useLoadBlog("blogs");
+    const [displayBlog, setDisplayBlog] = useState(false);
+    const [blogHeader, setBlogHeader] = useState("");
+    const [blogDate, setBlogDate] = useState("");
+    const [blogBody, setBlogBody] = useState("");
+    const [blogImg, setBlogImg] = useState("");
 
     const onReturn = () => {
         //setCurrentBlog(-1);
+        setDisplayBlog(false);
+        setBlogHeader("");
+        setBlogDate("");
+        setBlogBody("");
+        setBlogImg("");
     }
 
     const blogSelection = (value) => {
-        //setCurrentBlog(value);
+        console.log(value);
+        setBlogBody(value.body);
+        setBlogHeader(value.header);
+        setBlogDate(value.date);
+        setBlogImg(value.imgSrc);
+        setDisplayBlog(true);
     }
 
     return (
         <>
             <div className="_blogLibrary">
                 <Header />
+                {
+                    displayBlog &&
+                    <SingleBlog imgSrc={blogImg} returnCallback={onReturn} >{blogHeader}{blogBody}{blogDate}</SingleBlog>
+                }
+                {!displayBlog &&
                     <div className="_blogLibraryContent">
-                        <BlogCard search="blogs" header="Blogs" />
-                        <BlogCard search="reviews" header="Manhwa/Novel reviews"/>
+                        <BlogCard blogSelection={blogSelection} search="blogs" header="Blogs" />
+                        <BlogCard blogSelection={blogSelection} search="reviews" header="Manhwa/Novel reviews"/>
                     </div>
+                    }
                 <Footer href="/home#blog" />
             </div>
         </>
