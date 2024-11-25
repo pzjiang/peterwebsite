@@ -27,8 +27,10 @@ const MainPage = () => {
     },[]);
 
     return (
+        <>
+        <Header />
         <div className="_mainPageDiv">
-            <Header />
+            
             <Section className="_aboutSection">
                 <div className="_aboutText">
                     <div className="_typewriterContainer">
@@ -140,8 +142,10 @@ const MainPage = () => {
                 
             </Section>
            
-            <Footer href="/" />
+            
         </div>
+        <Footer href="/" />
+        </>
     );
 }
 export default MainPage;

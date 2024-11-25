@@ -34,8 +34,9 @@ const BlogPage = () => {
 
     return (
         <>
+            <Header />
             <div className="_blogLibrary">
-                <Header />
+                
                 {
                     displayBlog &&
                     <SingleBlog imgSrc={blogImg} returnCallback={onReturn} >{blogHeader}{blogBody}{blogDate}</SingleBlog>
@@ -46,8 +47,9 @@ const BlogPage = () => {
                         <BlogCard blogSelection={blogSelection} search="reviews" header="Manhwa/Novel reviews"/>
                     </div>
                     }
-                <Footer href="/home#blog" />
+                
             </div>
+            <Footer href="/home#blog" />
         </>
     );
 }

@@ -11,8 +11,9 @@ import losing from '../static/losescreen.png';
 const PurdueHang = () => {
     return (
         <>
+        <Header />
         <div className="_avalonDivBack">
-            <Header />
+
             <div className="_projectDisplay">
                 <div className="_projectDesc">
                     <div className="_projectTitle _hangManFont">Purdue HangMan</div>

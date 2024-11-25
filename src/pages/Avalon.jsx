@@ -11,8 +11,10 @@ import gameRoom from '../static/gameRoom.png';
 
 const Avalon = () => {
     return (
+        <>
+        <Header />
         <div className="_avalonDivBack">
-            <Header />
+            
             <div className="_projectDisplay">
                 <div className="_projectDesc">
                     <div className="_projectTitle _medievalFont">Avalon: Virtual Edition</div>
@@ -68,8 +70,10 @@ const Avalon = () => {
                     </div>
                 </div>
             </div>
-            <Footer href="/home#projects"/>
+            
         </div>
+        <Footer href="/home#projects"/>
+        </>
     );
 }
 
