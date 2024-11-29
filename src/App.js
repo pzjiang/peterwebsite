@@ -10,6 +10,7 @@ import BlogPage from './pages/BlogPage';
 import Avalon from './pages/Avalon';
 import PurdueCircle from './pages/PurdueCircle';
 import PurdueHang from './pages/PurdueHang';
+import SnakeGame from './pages/SnakeGame';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route href="/avalon"><Avalon /></Route>
         <Route href="/purdueZilla"><PurdueCircle/></Route>
         <Route href="/purdueHang"><PurdueHang/></Route>
+        <Route href="/snake"><SnakeGame /></Route>
       </Router>
     </div>
   );
