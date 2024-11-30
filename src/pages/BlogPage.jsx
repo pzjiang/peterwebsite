@@ -4,7 +4,7 @@ import '../style/BlogPage.css';
 import Header from '../components/Header';
 import SingleBlog from './SingleBlog';
 import BlogCard from '../components/BlogCard';
-import {useLoadBlog} from '../hooks/CustomHook';
+
 
 
 const BlogPage = () => {
@@ -15,7 +15,7 @@ const BlogPage = () => {
     const [blogImg, setBlogImg] = useState("");
 
     const onReturn = () => {
-        //setCurrentBlog(-1);
+
         setDisplayBlog(false);
         setBlogHeader("");
         setBlogDate("");
@@ -24,7 +24,6 @@ const BlogPage = () => {
     }
 
     const blogSelection = (value) => {
-        console.log(value);
         setBlogBody(value.body);
         setBlogHeader(value.header);
         setBlogDate(value.date);
@@ -55,12 +54,3 @@ const BlogPage = () => {
 }
 export default BlogPage;
 
-/**
- * 
- * {isLoaded && <div> 
-                    {blogs.map((val) => {
-                        return <div>{val.header}</div>;
-                    })}
-                    </div>}
- * 
- */

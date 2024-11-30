@@ -1,6 +1,7 @@
 ._snakeGameDiv {
     width: 100vw;
     height: 90vh;
+    text-align: center;
     justify-content: center;
     padding-top: 10vh;
     position: relative;
@@ -35,8 +36,55 @@
 
     }
 }
+@keyframes bouncingKeys {
+    0% {
+        transform: scale(0.6);
+    }
+    100% {
+        transform: scale(0.7);
+    }
+}
+._snakeArrowKeys {
+    animation: 2s bouncingKeys ease-in infinite alternate; 
+}
 ._snakeGameInstructions{
-    
+    margin-top: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    justify-content: center;
+
+
+}
+._cancelButton {
+    all: unset;
+    width: 100px;
+    height: 100px;
+    box-shadow: 3px 2px rgb(0, 72, 13);
+    border-radius: 50%;
+    border: 1px black solid;
+    background: rgb(255, 56, 56);
+    font-size: 24px;
+    transition: 0.25s;
+    &:hover {
+        cursor: pointer;
+        box-shadow: none;
+        transform:scale(0.95);
+    }
+}
+@keyframes pulseCountDown {
+    0%{
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+._countDownNumber {
+    position: relative;
+    margin-top: 15vh;
+    font-size: 44px;
+    animation: 1s pulseCountDown ease-in;
 }
 ._snakeGameAuxillaryButtons {
 
