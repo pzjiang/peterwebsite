@@ -86,8 +86,34 @@
     font-size: 44px;
     animation: 1s pulseCountDown ease-in;
 }
+._snakeGameGrid {
+    display: none;
+    position: absolute;
+    left: 10vw;
+    top: 10vh;
+    border: 1px solid black;
+    height: 400px;
+    width: 800px;
+
+}
+
 ._snakeGameAuxillaryButtons {
 
+}
+._snakeHead {
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    animation-fill-mode: forwards;
+}
+._snakeBody {
+    position: absolute;
+    background-color: yellow;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
 }
 ._moveRight{
     background-color: black;
@@ -96,20 +122,3 @@
     animation: 2s moveRight linear forwards;
 }
 
-@keyframes moveLeft {
-
-}
-@keyframes moveRight {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(50vw);
-    }
-}
-@keyframes moveDown {
-
-}
-@keyframes moveUp {
-
-}
