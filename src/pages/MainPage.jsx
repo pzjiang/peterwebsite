@@ -128,7 +128,12 @@ const MainPage = () => {
                         Embedded Projects
                     </div>
                     <div className="_displayProjectDivBody">
-                        Coming Soon!
+                        <div className="_expandButton">
+                            <Link href="/snake" className="_expandLink _zi">
+                                <div className="_expandIcon _ziI"></div>
+                                <div className="_expandText">Snake IO</div>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </Section>
