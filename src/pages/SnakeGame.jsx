@@ -125,6 +125,7 @@ const SnakeGame = () => {
         gridRef.current.style.display = 'inline-block';
         snakeHead.elem.animate(styleSheet[snakeHead.direction], styleSheet.animProps);
         setNewFoodPos(1);
+        curDirection.current = "moveRight";
         startGamePlay();
     }
     const onCancelClick = () => {
@@ -293,13 +294,17 @@ const SnakeGame = () => {
          
                     <>
                         <div ref={gridRef} className="_snakeGameGrid">
+                            <div className="_snakeGameGridBackground"></div>
                             {/*
                             <button onClick={startGamePlay}>Run Game Test</button>
                             <button onClick={stopGamePlay}>Stop game test</button>
                             <button onClick={onFoodEaten}>feedSnake</button>
                                 */}
                             <img ref={foodRef} src={apple} className="_snakeFood" />
+                            <button onClick={gameLoss} className="_snakeGamePlayButton _forfeitButton">Forfeit</button>
                         </div>
+                        
+
                         
                     </>
                 
@@ -308,6 +313,7 @@ const SnakeGame = () => {
                     <>
                         <div className="_snakeGameTitle">Final Score: {gameScore}</div>
                         <div className="_snakeGamePlayButtonContainer"><button onClick={onPlay} className="_snakeGamePlayButton">Play Again</button></div>
+                        
                     </>
                 }
             </div>

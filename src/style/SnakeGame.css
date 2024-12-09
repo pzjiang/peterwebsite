@@ -36,6 +36,10 @@
 
     }
 }
+._forfeitButton {
+    position: absolute;
+    top: 450px;
+}
 @keyframes bouncingKeys {
     0% {
         transform: scale(0.6);
@@ -91,10 +95,20 @@
     position: absolute;
     left: 10vw;
     top: 10vh;
-    border: 1px solid black;
+    border: 5px dotted brown;
     height: 400px;
     width: 800px;
-
+}
+._snakeGameGridBackground {
+    background-image: repeating-conic-gradient(#007d15 0% 25%, #E4E4ED 0% 50%);
+    background-position: 0 0, 20px 20px;
+    background-size: 40px 40px;
+    background-color: #E4E4ED;	
+    position: absolute;
+    height: 400px;
+    width: 800px;
+    z-index: 0;
+    opacity: 0.1;
 }
 
 ._snakeGameAuxillaryButtons {
