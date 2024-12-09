@@ -100,6 +100,12 @@
 ._snakeGameAuxillaryButtons {
 
 }
+._snakeFood {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+
+}
 ._snakeHead {
     position: absolute;
     background-color: red;
