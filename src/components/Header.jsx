@@ -27,6 +27,11 @@ const Header = () => {
                         <a className="_quickLink" target="_blank" href={resume}><div className="_quickRow">My Resume</div></a>
                         <a className="_quickLink" target="_blank" href="https://github.com/pzjiang"><div className="_quickRow">GitHub</div></a>
                         <Link className="_quickLink" href="/blogs"><div className="_quickRow">Blog</div></Link>
+                        <div className="_quickRow _projectRow"><img alt="left arrow" className="_projectArrow" src={leftarrow} /><a className="_quickLink">Embedded Projects</a>
+                            <div className="_projectDropdownContent">
+                                <Link href="/snake" className="_quickLink"><div className="_projectSubRow">Snake IO</div></Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
       
