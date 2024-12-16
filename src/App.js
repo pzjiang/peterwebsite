@@ -11,6 +11,7 @@ import Avalon from './pages/Avalon';
 import PurdueCircle from './pages/PurdueCircle';
 import PurdueHang from './pages/PurdueHang';
 import SnakeGame from './pages/SnakeGame';
+import SudokuSolver from './pages/SudokuSolver';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route href="/purdueZilla"><PurdueCircle/></Route>
         <Route href="/purdueHang"><PurdueHang/></Route>
         <Route href="/snake"><SnakeGame /></Route>
+        <Route href="/sudoku"><SudokuSolver /></Route>
       </Router>
     </div>
   );

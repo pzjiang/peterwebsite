@@ -1,0 +1,52 @@
+._splitScreenContainer {
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+._sudokuBackground {
+    background: linear-gradient(45deg, white, rgb(211, 211, 211), rgb(199, 199, 199), rgb(255, 255, 255));
+}
+
+._sudokuTitle {
+    font-size: 24px;
+}
+._sudokuEntryField {
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+}
+._entryGrid {
+    padding: 3px;
+    margin: 4px;
+    min-width: 400px;
+}
+
+._pdRight {
+    margin-right: 5px;
+}
+
+._pdBottom {
+    margin-bottom: 5px;
+}
+
+._splitScreenLeft {
+    min-width: 400px;
+}
+
+._splitScreenRight {
+   min-width: 400px;
+}
+._sudokuDisplaySolve {
+    justify-content: center;
+    justify-items: center;
+}
+._sudokuDisplayRow {
+    display: flex;
+}
+
+._displayBorder {
+    border: 1px solid black;
+}

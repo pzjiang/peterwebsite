@@ -90,6 +90,7 @@
     font-size: 44px;
     animation: 1s pulseCountDown ease-in;
 }
+
 ._snakeGameGrid {
     display: none;
     position: absolute;
@@ -99,6 +100,7 @@
     height: 400px;
     width: 800px;
 }
+
 ._snakeGameGridBackground {
     background-image: repeating-conic-gradient(#007d15 0% 25%, #E4E4ED 0% 50%);
     background-position: 0 0, 20px 20px;
@@ -111,13 +113,12 @@
     opacity: 0.1;
 }
 
-
 ._snakeFood {
     position: absolute;
     height: 20px;
     width: 20px;
-
 }
+
 ._snakeHead {
     position: absolute;
     background-color: red;
@@ -126,6 +127,7 @@
     width: 20px;
     animation-fill-mode: forwards;
 }
+
 ._snakeBody {
     position: absolute;
     background-color: yellow;
@@ -133,6 +135,7 @@
     height: 20px;
     width: 20px;
 }
+
 ._moveRight{
     background-color: black;
     width: 100px;
