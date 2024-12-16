@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect, useState, useRef} from 'react';
 import Footer from '../components/Footer';
 import SplitScreen from '../components/SplitScreen';
 
@@ -11,22 +11,26 @@ const SudokuSolver = () => {
     const arrNine = [1,2,3,4,5,6,7,8,9];
     const codeNine = 57;
     const codeOne = 49;
-    const regex = new RegExp('[1-9]');
+    const inputRef = useRef(new Array(81));
+    
 
     useEffect(() => {
-        refreshGrid();
+        refreshGrid(true);
         setLoadState(1);
     },[]);
 
-    const refreshGrid = () => {
-        const newGrid = new Array(81);
-        const newSolvedGrid = new Array(81);
-        for (let i = 0; i < 81; i++) {
-            newGrid[i] = '';
-            newSolvedGrid[i] = '';
+    const refreshGrid = (clearGrid) => {
+        if (clearGrid) {
+            const newGrid = new Array(81);
+            const newSolvedGrid = new Array(81);
+            for (let i = 0; i < 81; i++) {
+                newGrid[i] = '';
+                newSolvedGrid[i] = '';
+            }
+            setSolvedGrid(newSolvedGrid);
+            setSudokuGrid(newGrid);
         }
-        setSolvedGrid(newSolvedGrid);
-        setSudokuGrid(newGrid);
+  
         setLoadState(1);
         enableGrid();
         setWarningMessage('');
@@ -74,7 +78,7 @@ const SudokuSolver = () => {
 
     const verifyPossible = (ind) => {
         
-        if (!sudokuGrid[ind] === '') {
+        if (sudokuGrid[ind] === '') {
             return true;
         }
         const x = Math.floor(ind / 9);
@@ -91,24 +95,78 @@ const SudokuSolver = () => {
     const verifySquare = (x, y) => {
         const cornerX = x - (x % 3);
         const cornerY = y - (y % 3);
-    }
-    const verifyRow = () => {
+        
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                if ((cornerX + i) === x && (cornerY + j) === y) {
+                    continue;
+                }
+                if (solvedGrid[realInd(cornerX + i, cornerY + j)] === solvedGrid[realInd(x, y)]) {
 
+                    console.log("failed square");
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    const verifyRow = (x, y) => {
+        for (let i = 1; i < 10; i++) {
+            //check row and column
+            
+            if (i !==x && solvedGrid[realInd(i,y)] === solvedGrid[realInd(x,y)]) {
+                console.log("failed x");
+                return false;
+            }
+            if (i !== y && solvedGrid[realInd(x, i)] === solvedGrid[realInd(x,y)]) {
+                console.log("failed y");
+                return false;
+            }
+        }
+        return true;
+    }
+    const recursiveSudoku = async (ind) => {
+        if (ind === 82) {
+            return true;
+        }
+        if (sudokuGrid[ind] !== '') {
+            // if this is preset clue
+            if (recursiveSudoku(ind + 1)) {
+                return true;
+            }
+            return false;
+        }
+        else {
+            for (let i = 1; i < 10; i++) {
+                solvedGrid[ind] = i;
+                if (!verifyPossible(ind)) {
+                    continue;
+                }
+                if (recursiveSudoku(ind + 1)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
     const backtrackSudoku = async () => {
 
+        const solFound = await recursiveSudoku(0);
+        if (!solFound) {
+            setWarningMessage("Was not able to find a valid solution to this puzzle");
+            setLoadState(1);
+        }
+        setLoadState(3);
     }
     const solveSudoku = async () => {
         if (!preProcess()) {
+            setLoadState(1);
             return;
         }
+        
+        console.log("passed preprocess");
+        backtrackSudoku();
 
-        for (let i = 0; i < solvedGrid.length; i++) {
-            solvedGrid[i] = "1";
-        }
-
-
-        setLoadState(3);
     }
     const solvePuzzle = () => {
         //initial start to solving the puzzle
@@ -119,6 +177,7 @@ const SudokuSolver = () => {
         } 
         disableGrid();
     }
+
     const disableGrid = () => {
         const inputElements = document.getElementsByName('sudokuEntry');
         inputElements.forEach((element) => {
@@ -132,6 +191,33 @@ const SudokuSolver = () => {
             element.disabled = false;
             element.value = '';
         });
+    }
+    const onKeyDownEntry = (key,x,y) => {
+        //left, up, right, down
+        //37, 38, 39, 40
+        //ArrowLeft, ArrowUp, ArrowRight, ArrowDown
+        let newX = x;
+        let newY = y;
+        if (key === 'ArrowLeft') {
+            newY -= 1;
+        }
+        else if (key === 'ArrowUp') {
+            newX -= 1;
+        }
+        else if (key === 'ArrowRight') {
+            newY += 1;
+        }
+        else if (key === 'ArrowDown') {
+            newX += 1;
+        }
+        else {
+            return;
+        }
+        if (newX < 0 || newY < 0 || newX > 8 || newY > 8) {
+            //out of bounds
+            return;
+        }
+        inputRef.current[realInd(newX, newY)].focus();
     }
 
     return (
@@ -149,7 +235,9 @@ const SudokuSolver = () => {
                             {arrNine.map((value2) => {
                                 return (
                                 
-                                <input name="sudokuEntry" type="text"  maxLength={1}
+                                <input ref={(el) => {inputRef.current[realInd(value - 1, value2 - 1)] = el;}} 
+                                onKeyDown={(event) => {onKeyDownEntry(event.key, value - 1, value2 - 1)}} 
+                                name="sudokuEntry" type="text"  maxLength={1}
                                 className={`_sudokuEntryField ${value%3 === 0 ? '_pdBottom' : ""} ${value2%3 === 0 ? '_pdRight' : ""}`} 
                                 onInput={(e) => inputChanged(e, value - 1, value2 - 1)}>
                                 </input>);
@@ -159,7 +247,8 @@ const SudokuSolver = () => {
                         })}
                         <div className="_sudokuWarning">{warningMessage}</div>
                         <button onClick={solvePuzzle} >Solve Puzzle</button>
-                        <button onClick={refreshGrid} >Refresh Puzzle</button>
+                        <button onClick={() => {refreshGrid(false)}} >Edit Puzzle</button>
+                        <button onClick={() => {refreshGrid(true)}} >Refresh Puzzle</button>
                     </div>
                 </div>
                 <div className="_sudokuDisplaySolve">
