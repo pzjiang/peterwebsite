@@ -30,6 +30,7 @@ const Header = () => {
                         <div className="_quickRow _projectRow"><img alt="left arrow" className="_projectArrow" src={leftarrow} /><a className="_quickLink">Embedded Projects</a>
                             <div className="_projectDropdownContent">
                                 <Link href="/snake" className="_quickLink"><div className="_projectSubRow">Snake IO</div></Link>
+                                <Link href="/sudoku" className="_quickLink"><div className="_projectSubRow">Sudoku Solver</div></Link>
                             </div>
                         </div>
                     </div>

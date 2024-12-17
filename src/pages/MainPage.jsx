@@ -134,6 +134,12 @@ const MainPage = () => {
                                 <div className="_expandText">Snake IO</div>
                             </Link>
                         </div>
+                        <div className="_expandButton">
+                            <Link href="/sudoku" className="_expandLink _zi">
+                                <div className="_expandIcon _ziI"></div>
+                                <div className="_expandText">Sudoku Solver</div>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </Section>
