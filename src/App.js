@@ -12,7 +12,7 @@ import PurdueCircle from './pages/PurdueCircle';
 import PurdueHang from './pages/PurdueHang';
 import SnakeGame from './pages/SnakeGame';
 import SudokuSolver from './pages/SudokuSolver';
-
+import StrandsSolver from './pages/StandsSolver';
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
         <Route href="/purdueHang"><PurdueHang/></Route>
         <Route href="/snake"><SnakeGame /></Route>
         <Route href="/sudoku"><SudokuSolver /></Route>
+        <Route href="/strands"><StrandsSolver /></Route>
       </Router>
     </div>
   );
